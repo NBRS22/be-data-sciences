@@ -1,10 +1,23 @@
-# User Session Classifier
+# Identification des utilisateurs de Copilote
 
-Projet de classification d'utilisateurs basé sur l'analyse de leurs sessions web. Ce modèle utilise des techniques d'apprentissage automatique pour prédire l'identité d'un utilisateur à partir des caractéristiques de sa session de navigation.
+Ce code présente la résolution du problème du traitement des traces d’utilisation du logiciel Copilote. Ce logiciel, édité par la société Infologic, dans le secteur de l’agro-alimentaire, est utilisé par de nombreux acteurs industriels. L’objectif est de travailler sur des modèles d’analyse automatique des traces d’utilisation, qui permettent d’améliorer l’offre auprès des clients.
+
 
 ## 📋 Description
 
-Ce projet implémente un système de classification qui analyse les patterns de navigation des utilisateurs pour identifier leur identité. Le modèle extrait diverses caractéristiques des sessions (actions, timestamps, écrans, configurations, chaînes) et utilise un Random Forest Classifier pour la prédiction.
+Le problème posé consiste à identifier automatiquement quel utilisateur interagit avec
+un logiciel, simplement à partir des traces de son utilisation. Chez Infologic, les testeurs
+utilisent différents profils pour évaluer diverses fonctionalités mais doivent indiquer manuellement quel profil ils ont utilisé.
+
+L’objectif de ce projet est donc de concevoir un modèle de classification capable de
+reconnaître un utilisateur à partir de ses actions sur le logiciel, en ayant à disposition les
+données des précédentes sessions. Cette approche de machine learning permet donc de
+simplifier les processus de test et de détecter d’éventuelles tentatives d’intrusion comme
+un pirate qui utilise le compte d’un utilisateur réel.
+
+Le jeu de données d’entraînement fourni contient un grand volume de traces d’utilisation, qu’il faut analyser et traiter pour entraîner un modèle performant. Une prédiction
+est ensuite effectuée sur le jeu de donnée test et sera évaluée à l’aide du F1 score, qui
+calcule la moyenne entre la précision et le rappel.
 
 ## 🚀 Fonctionnalités
 
@@ -28,27 +41,23 @@ Ce projet implémente un système de classification qui analyse les patterns de 
 
 1. Clonez le repository :
 ```bash
-git clone <url-du-repo>
+git clone <https://github.com/NBRS22/be-data-sciences>
 cd BE-Data-Science-II
 ```
 
 2. Installez les dépendances :
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt 
 ```
 
 ## 💻 Utilisation
 
-1. Placez vos fichiers de données dans le dossier `data/` :
-   - `train.csv` : Données d'entraînement
-   - `test.csv` : Données de test
-
-2. Exécutez le script principal :
+1. Exécutez le script principal :
 ```bash
 python main.py
 ```
 
-3. Le fichier `submission.csv` sera généré avec les prédictions.
+2. Le fichier `submission.csv` sera généré avec les prédictions.
 
 ## 📁 Structure du projet
 
@@ -137,7 +146,7 @@ Le modèle est évalué avec le **F1-score macro** sur un split de validation in
 ## 👤 Auteurs
 
 Projet développé pour BE Data Science par : 
-    Adrien Baraton
-    Zélie Brachet
-    Nour EL Bachari
+- Adrien Baraton
+- Zélie Brachet
+- Nour EL Bachari 
 
