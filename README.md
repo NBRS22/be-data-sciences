@@ -145,8 +145,9 @@ Le modèle est évalué avec le **F1-score macro** sur un split de validation in
 
 ## 👤 Auteurs
 
-Projet développé pour BE Data Science par : 
+Projet développé par : 
 - Adrien Baraton
 - Zélie Brachet
 - Nour EL Bachari 
+- Asmae HMIDANI
 
