@@ -227,10 +227,10 @@ model = RandomForestClassifier(
 model.fit(X_t, y_t)
 y_pred = model.predict(X_val)
 score = f1_score(y_val, y_pred, average="macro")
-print(f"📈 Macro-F1 (validation interne) : {score:.4f}")
+print(f"Macro-F1 (validation interne) : {score:.4f}")
 
 cv_scores = cross_val_score(model, X_train, y_train, cv=5, scoring="f1_macro", n_jobs=-1)
-print(f"🔁 CV F1-macro moyenne : {cv_scores.mean():.4f} (+/- {cv_scores.std():.4f})")
+print(f"CV F1-macro moyenne : {cv_scores.mean():.4f} (+/- {cv_scores.std():.4f})")
 
 # ===========================
 #  9. Prédiction sur le test
