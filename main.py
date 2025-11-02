@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import cross_val_score
 
 # =========================
 #  1. Lecture des datasets
@@ -228,9 +229,8 @@ y_pred = model.predict(X_val)
 score = f1_score(y_val, y_pred, average="macro")
 print(f"📈 Macro-F1 (validation interne) : {score:.4f}")
 
-#from sklearn.model_selection import cross_val_score
-#cv_scores = cross_val_score(model, X_train, y_train, cv=5, scoring="f1_macro", n_jobs=-1)
-#print(f"🔁 CV F1-macro moyenne : {cv_scores.mean():.4f} (+/- {cv_scores.std():.4f})")
+cv_scores = cross_val_score(model, X_train, y_train, cv=5, scoring="f1_macro", n_jobs=-1)
+print(f"🔁 CV F1-macro moyenne : {cv_scores.mean():.4f} (+/- {cv_scores.std():.4f})")
 
 # ===========================
 #  9. Prédiction sur le test
