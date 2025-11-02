@@ -149,5 +149,4 @@ Projet développé par :
 - Adrien Baraton
 - Zélie Brachet
 - Nour EL Bachari 
-- Asmae HMIDANI
 
